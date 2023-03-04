@@ -30,7 +30,9 @@ public class RomeArabian {
                 result = calculator.calcult(romeNumbersSORN.rome(operandOne), operation,
                         romeNumbersSORN.rome(operandTwo));
                 if (operation == '-' && romeNumbersSORN.rome(operandOne) <= romeNumbersSORN.rome(operandTwo)) {
-                    throw new RuntimeException("В римском исчислении нет отрицательных чисел!");
+                    throw new InputMismatchException("В римском исчислении нет отрицательных чисел и 0 !");
+                }else if (operation == '/' && romeNumbersSORN.rome(operandOne) <= romeNumbersSORN.rome(operandTwo)){
+                    throw new InputMismatchException("В римском счислении есть только Целые числа.");
                 }else {
                     System.out.println(romeNumbersSORN.convertNumToRoman(result));
                 }
