@@ -29,9 +29,14 @@ public class RomeArabian {
             if (checkOperands(operandOne, operandTwo)) {
                 result = calculator.calcult(romeNumbersSORN.rome(operandOne), operation,
                         romeNumbersSORN.rome(operandTwo));
-                System.out.println(romeNumbersSORN.convertNumToRoman(result));
+                if (operation == '-' && romeNumbersSORN.rome(operandOne) <= romeNumbersSORN.rome(operandTwo)) {
+                    throw new RuntimeException("В римском исчислении нет отрицательных чисел!");
+                }else {
+                    System.out.println(romeNumbersSORN.convertNumToRoman(result));
+                }
             } else {
-                result = calculator.calcult(Integer.parseInt(operandOne), operation, Integer.parseInt(operandTwo));
+                result = calculator.calcult(Integer.parseInt(operandOne), operation,
+                        Integer.parseInt(operandTwo));
                 System.out.println(result);
             }
         } catch (InputMismatchException e) {
