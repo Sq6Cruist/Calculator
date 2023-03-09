@@ -41,9 +41,8 @@ public class RomeArabian {
                         Integer.parseInt(operandTwo));
                 System.out.println(result);
             }
-        } catch (InputMismatchException e) {
+        } catch (InputMismatchException | NumberFormatException e) {
             System.out.println("Не верный формат операции.");
-        } catch (NumberFormatException e) {
             System.out.println("Введите либо Арабские числа(1 + 1) либо Римские числа(I + I)");
         }
     }
