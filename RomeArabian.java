@@ -30,9 +30,9 @@ public class RomeArabian {
                 result = calculator.calcult(romeNumbersSORN.rome(operandOne), operation,
                         romeNumbersSORN.rome(operandTwo));
                 if (operation == '-' && romeNumbersSORN.rome(operandOne) <= romeNumbersSORN.rome(operandTwo)) {
-                    throw new InputMismatchException("В римском исчислении нет отрицательных чисел и 0 !");
+                    throw new ThereAreNoNegativeNumbersInRomanNumerals("В римском счислении нет отрицательных чисел!");
                 }else if (operation == '/' && romeNumbersSORN.rome(operandOne) <= romeNumbersSORN.rome(operandTwo)){
-                    throw new InputMismatchException("В римском счислении есть только Целые числа.");
+                    throw new ThereAreNoFractionalNumbersInRomanNumerals("В римском счислении нет дробных чисел!");
                 }else {
                     System.out.println(romeNumbersSORN.convertNumToRoman(result));
                 }
@@ -43,7 +43,7 @@ public class RomeArabian {
             }
         } catch (InputMismatchException | NumberFormatException e) {
             System.err.println("Не верный формат операции.");
-            System.err.println("Введите либо Арабские числа(1 + 1) либо Римские числа(I + I)");
+            System.err.println("Введите либо Арабские числа в формате (1 + 1) либо Римские числа в формате (I + I)");
         }
     }
 }
