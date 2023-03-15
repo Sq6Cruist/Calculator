@@ -30,9 +30,9 @@ public class RomeArabian {
                 result = calculator.calcult(romeNumbersSORN.rome(operandOne), operation,
                         romeNumbersSORN.rome(operandTwo));
                 if (operation == '-' && romeNumbersSORN.rome(operandOne) <= romeNumbersSORN.rome(operandTwo)) {
-                    throw new ThereAreNoNegativeNumbersInRomanNumerals("В римском счислении нет отрицательных чисел!");
-                }else if (operation == '/' && romeNumbersSORN.rome(operandOne) <= romeNumbersSORN.rome(operandTwo)){
-                    throw new ThereAreNoFractionalNumbersInRomanNumerals("В римском счислении нет дробных чисел!");
+                    throw new ThereAreNoNegativeNumbersInRomanNumerals("В римском исчислении нет отрицательных чисел и O!");
+                }else if (operation == '/' && romeNumbersSORN.rome(operandOne) < romeNumbersSORN.rome(operandTwo)){
+                    throw new ThereAreNoFractionalNumbersInRomanNumerals("В римском исчислении нет дробных чисел!");
                 }else {
                     System.out.println(romeNumbersSORN.convertNumToRoman(result));
                 }
