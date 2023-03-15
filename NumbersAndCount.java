@@ -2,9 +2,9 @@ package calculator;
 
 public class NumbersAndCount {
 
-    private boolean numberCheck(int nomber1, int nomber2) {
+    private boolean numberCheck(int number1, int number2) {
 
-        return nomber1 > 0 && nomber1 <= 10 && nomber2 > 0 && nomber2 <= 10;
+        return number1 > 0 && number1 <= 10 && number2 > 0 && number2 <= 10;
     }
 
     public int calcult(int numberOne, char sing, int numberTwo) {
