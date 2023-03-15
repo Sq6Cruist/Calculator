@@ -8,7 +8,7 @@ public class NumbersAndCount {
     }
 
     public int calcult(int numberOne, char sing, int numberTwo) {
-        int result = 0;
+        int result;
         if (!numberCheck(numberOne, numberTwo)) {
             throw new NumberAboveTenOrLessThanZeroException("Введи число от 1-10!");
             //вывод ошибки если пользователь ввел не верное число.
