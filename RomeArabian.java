@@ -2,7 +2,7 @@ package calculator;
 
 import java.util.InputMismatchException;
 
-public class RomeArabian {
+class RomeArabian {
     NumbersAndCount calculator = new NumbersAndCount();
     setOfRomanNumerals romeNumbersSORN = new setOfRomanNumerals();
     String[] roman = {"O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
@@ -23,7 +23,7 @@ public class RomeArabian {
         return isBothRoman;
     }
 
-    public void arabicNum(String operandOne, char operation, String operandTwo) {
+    public String arabicNum(String operandOne, char operation, String operandTwo) {
         int result;
         try {
             if (checkOperands(operandOne, operandTwo)) {
@@ -45,5 +45,6 @@ public class RomeArabian {
             System.err.println("Не верный формат операции.");
             System.err.println("Введите либо Арабские числа в формате (1 + 1) либо Римские числа в формате (I + I)");
         }
+        return operandOne;
     }
 }

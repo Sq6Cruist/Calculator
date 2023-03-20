@@ -2,7 +2,7 @@ package calculator;
 
 import java.util.Scanner;
 
-public class Sum {
+class Sum {
     public static void main(String[] args) {
         RomeArabian calculator = new RomeArabian();
         Scanner console = new Scanner(System.in);

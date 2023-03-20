@@ -1,6 +1,6 @@
 package calculator;
 
-public class NumbersAndCount {
+class NumbersAndCount {
 
     private boolean numberCheck(int number1, int number2) {
 

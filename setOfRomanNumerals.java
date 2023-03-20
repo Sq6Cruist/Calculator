@@ -1,6 +1,6 @@
 package calculator;
 
-public class setOfRomanNumerals {
+class setOfRomanNumerals {
     public String convertNumToRoman(int numArabian) {
 
         String[] roman = {"0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII",
