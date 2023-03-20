@@ -4,8 +4,13 @@ import java.util.Scanner;
 
 class Sum {
     public static void main(String[] args) {
-        RomeArabian calculator = new RomeArabian();
+
+        String result;
         Scanner console = new Scanner(System.in);
-        calculator.arabicNum(console.next(), console.next().charAt(0), console.next());
+        result = Main.calc(console.nextLine());
+        if(result != null) {
+            System.out.println(result);
+        }
+
     }
 }
