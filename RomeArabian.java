@@ -23,7 +23,7 @@ class RomeArabian {
         return isBothRoman;
     }
 
-    public String arabicNum(String operandOne, char operation, String operandTwo) {
+    public void arabicNum(String operandOne, char operation, String operandTwo) {
         int result;
         try {
             if (checkOperands(operandOne, operandTwo)) {
@@ -45,6 +45,5 @@ class RomeArabian {
             System.err.println("Не верный формат операции.");
             System.err.println("Введите либо Арабские числа в формате (1 + 1) либо Римские числа в формате (I + I)");
         }
-        return operandOne;
     }
 }
